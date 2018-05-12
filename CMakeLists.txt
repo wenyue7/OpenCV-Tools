@@ -24,10 +24,10 @@ if(CMAKE_VERSION VERSION_LESS "2.8.11")
 endif()
 
 # Declare the executable target built from your sources
-add_executable(OpenCV-Tools ./src/main.cpp)
+add_executable(opencv-tools ./src/main.cpp)
 
 # Include the head file directories
 include_directories(./include)
 
 # Link your application with OpenCV libraries
-target_link_libraries(OpenCV-Tools ${OpenCV_LIBS})
+target_link_libraries(opencv-tools ${OpenCV_LIBS})
