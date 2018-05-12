@@ -1,0 +1,3 @@
+/home/administrator/Projects/OpenCV-Tools/build/CMakeFiles/edit_cache.dir
+/home/administrator/Projects/OpenCV-Tools/build/CMakeFiles/rebuild_cache.dir
+/home/administrator/Projects/OpenCV-Tools/build/CMakeFiles/opencv-tools.dir

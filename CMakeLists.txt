@@ -24,7 +24,7 @@ if(CMAKE_VERSION VERSION_LESS "2.8.11")
 endif()
 
 # Declare the executable target built from your sources
-add_executable(opencv-tools ./src/main.cpp)
+add_executable(opencv-tools ./src/main.cpp ./src/custom_func.cpp)
 
 # Include the head file directories
 include_directories(./include)
