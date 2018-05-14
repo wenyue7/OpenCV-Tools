@@ -21,6 +21,11 @@ void custom_sobel(Mat &image, Mat &result);
 
 /******************表示和描述**************************/
 /******************目标识别****************************/
-
+/******************自定义算法**************************/
+void custom0(Mat &image, Mat &result);
+void custom1(Mat &image, Mat &result);
+void custom2(Mat &image, Mat &result);
+void custom3(Mat &image, Mat &result);
+void custom4(Mat &image, Mat &result);
 
 #endif

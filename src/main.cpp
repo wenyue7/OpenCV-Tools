@@ -37,9 +37,21 @@ int main(int argc, char **argv)
 				cout << "Selected Sobel" << endl;
 				algorithm[81] = true;
 				break;
-			case 'c'://自定义算法
-				cout << "Selected custome1" << endl;
+			case '0'://自定义算法0
+				cout << "Selected custome0" << endl;
 				algorithm[110] = true;
+			case '1'://自定义算法1
+				cout << "Selected custome1" << endl;
+				algorithm[111] = true;
+			case '2'://自定义算法2
+				cout << "Selected custome2" << endl;
+				algorithm[112] = true;
+			case '3'://自定义算法3
+				cout << "Selected custome3" << endl;
+				algorithm[113] = true;
+			case '4'://自定义算法4
+				cout << "Selected custome4" << endl;
+				algorithm[114] = true;
 		}
 
 		image_path = *(argv + 1);
