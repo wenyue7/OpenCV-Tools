@@ -37,6 +37,9 @@ int main(int argc, char **argv)
 				cout << "Selected Sobel" << endl;
 				algorithm[81] = true;
 				break;
+			case 'c'://自定义算法
+				cout << "Selected custome1" << endl;
+				algorithm[110] = true;
 		}
 
 		image_path = *(argv + 1);
@@ -64,7 +67,15 @@ int main(int argc, char **argv)
 	
 	//算法执行部分,包含模式1的主要操作
 	while(1)
-	{
+	{   
+		/******************灰度变换与空间滤波******************/
+        /******************频域滤波****************************/
+        /******************图像复原与重建**********************/
+        /******************彩色图像处理************************/
+        /******************小波和多分辨率处理******************/
+        /******************图像压缩****************************/
+        /******************形态学图像处理**********************/
+        /******************图像分割****************************/
 		if(work_model == 1)
 			select_algorithm(algorithm); //模式1选择算法
 
@@ -78,6 +89,35 @@ int main(int argc, char **argv)
 	    	custom_sobel(image, result);
 			algorithm[81] == false;
 	    }
+		/******************表示和描述**************************/
+        /******************目标识别****************************/
+        /******************自定义算法**************************/
+        if(algorithm[110] == true)   //自定义算法0
+	    {
+	    	custom0(image, result);
+			algorithm[110] == false;
+	    }
+		if(algorithm[111] == true)   //自定义算法1
+	    {
+	    	custom1(image, result);
+			algorithm[111] == false;
+	    }
+        if(algorithm[112] == true)   //自定义算法2
+	    {
+	    	custom2(image, result);
+			algorithm[112] == false;
+	    }
+        if(algorithm[113] == true)   //自定义算法3
+	    {
+	    	custom3(image, result);
+			algorithm[113] == false;
+	    }
+        if(algorithm[114] == true)   //自定义算法4
+	    {
+	    	custom4(image, result);
+			algorithm[114] == false;
+	    }
+
 
 
 	    imshow("Result", result);
@@ -118,30 +158,37 @@ void select_algorithm(bool *algorithm)
 {
 	int num; //算法编号
 	cout << "******************灰度变换与空间滤波*******************" << endl;
+	cout << "10." << endl;
 
 
 	cout << endl;
 	cout << "******************频域滤波*****************************" << endl;
+	cout << "20." << endl;
 
 
 	cout << endl;
 	cout << "******************图像复原与重建***********************" << endl;
+	cout << "30." << endl;
 
 
 	cout << endl;
 	cout << "******************彩色图像处理*************************" << endl;
+	cout << "40." << endl;
 
 
 	cout << endl;
 	cout << "******************小波和多分辨率处理*******************" << endl;
+	cout << "50." << endl;
 
 
 	cout << endl;
 	cout << "******************图像压缩*****************************" << endl;
+	cout << "60." << endl;
 
 
 	cout << endl;
 	cout << "******************形态学图像处理***********************" << endl;
+	cout << "70." << endl;
 
 
 	cout << endl;
@@ -153,10 +200,21 @@ void select_algorithm(bool *algorithm)
 
 	cout << endl;
 	cout << "******************表示和描述***************************" << endl;
+	cout << "90." << endl;
 
 
 	cout << endl;
 	cout << "******************目标识别*****************************" << endl;
+	cout << "100." << endl;
+
+
+	cout << endl;
+	cout << "******************自定义算法***************************" << endl;
+	cout << "110.custom0" << endl;
+	cout << "111.custom1" << endl;
+	cout << "112.custom2" << endl;
+	cout << "113.custom3" << endl;
+	cout << "114.custom4" << endl;
 
 	cin >> num; //获取算法编号
 

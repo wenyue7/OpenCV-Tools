@@ -25,6 +25,8 @@ void custom_canny(Mat &image, Mat &result)
 	cin >> L2gradient;
 
 	Canny(image, result, threshold1, threshold2, apertureSize, L2gradient);
+
+	return;
 }
 
 ///////////////////sobel算法/////////////////
@@ -53,6 +55,28 @@ void custom_sobel(Mat &image, Mat &result)
 
 	Sobel(image, result, ddepth, dx, dy, ksize, scale, delta, borderType);
 
+	return;
 }
 /******************表示和描述**************************/
 /******************目标识别****************************/
+/******************自定义算法**************************/
+void custom0(Mat &image, Mat &result)
+{
+	return;
+}
+void custom1(Mat &image, Mat &result)
+{
+	return;
+}
+void custom2(Mat &image, Mat &result)
+{
+	return;
+}
+void custom3(Mat &image, Mat &result)
+{
+	return;
+}
+void custom4(Mat &image, Mat &result)
+{
+	return;
+}
