@@ -1,3 +1,5 @@
+//opencv3.3.0
+
 #include <opencv-tools.hpp>
 
 void select_algorithm(bool *alogrithm);
@@ -30,9 +32,14 @@ int main(int argc, char **argv)
 			case 'C': //Canny算法
 				cout << "Selected Canny" << endl;
 				algorithm[80] = true;
-				image_path = *(argv + 1);
+				break;
+			case 'S'://Sobel算法
+				cout << "Selected Sobel" << endl;
+				algorithm[81] = true;
 				break;
 		}
+
+		image_path = *(argv + 1);
 	}
 
 	Mat image, result;
@@ -65,6 +72,11 @@ int main(int argc, char **argv)
 	    {
 	    	custom_canny(image, result);
 			algorithm[80] == false;
+	    }
+		if(algorithm[81] == true)   //Sobel算法
+	    {
+	    	custom_sobel(image, result);
+			algorithm[81] == false;
 	    }
 
 
@@ -135,6 +147,7 @@ void select_algorithm(bool *algorithm)
 	cout << endl;
 	cout << "******************图像分割*****************************" << endl;
 	cout << "80.Canny" << endl;
+	cout << "81.Soble" << endl;
 
 
 
